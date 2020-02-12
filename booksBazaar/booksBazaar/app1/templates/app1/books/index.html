@@ -1,5 +1,8 @@
 {% extends 'app1/base.html'%}
 {% load static %}
+{% block css%}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+{% endblock css%}
 
 {% block content %}
     <header>
@@ -9,10 +12,10 @@
 
                 <img class="logo" src="{% static 'images/logo.png'%}">
                 <ul class="main-nav" id="check">
-                    <li><a href="#">RENT</a></li>
+                    <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
                     <li><a href="#">BUY</a></li>
                     <li><a href="#">SELL</a></li>
-                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="{% url 'app1:login' %}">LOGIN</a></li>
 
                 </ul>
 

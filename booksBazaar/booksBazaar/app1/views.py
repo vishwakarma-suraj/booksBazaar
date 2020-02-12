@@ -7,11 +7,14 @@ from .models import *
 
 def index_page(request):
     return render(request, 'app1/books/index.html')
+	
+def book_list(request):
+	return render(request, 'app1/books/book_list.html')
 
 
 def login(request):
     c = {}
-    return render(request, 'login.html', c)
+    return render(request, 'app1/books/login.html', c)
 
 
 def loggedin(request):

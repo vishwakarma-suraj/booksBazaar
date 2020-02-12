@@ -1,0 +1,70 @@
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+.book-nav{
+	
+	width:100%;
+	height:100px;
+	
+	background:url(../images/1.jpg);
+	
+}
+
+
+
+.book-logo {
+    height: 60px;
+    width: auto;
+    margin-left: 80px;
+    float: left;
+    margin-top: 20px;
+
+
+}
+
+.book-main-nav {
+    float: right;
+    margin-top: 40px;
+   padding-right:80px;
+
+}
+
+
+.book-main-nav li {
+
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+}
+
+
+
+
+
+.book-main-nav li a {
+
+color:white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#bo-container{
+width:100%;
+height:100vh;
+border:1px solid red;
+padding-left:20px;
+padding-top:20px;
+overflow:hidden;
+background:yellow;
+
+}
+
+
+
+
+

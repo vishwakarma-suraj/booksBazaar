@@ -110,3 +110,5 @@ STATIC_URL = '/static/'
 
 
 
+MEDIA_ROOT= 'booksBazaar/media'
+MEDIA_URL='/media/'

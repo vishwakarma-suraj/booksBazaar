@@ -1,0 +1,64 @@
+{% extends "app1/base.html" %}
+ {% load static %}
+{% block css%}
+
+ <link rel="stylesheet" href="{% static 'css/book_page.css' %}" />
+
+{% endblock css%}
+{% block content %} 
+      
+          <div class="book-nav">
+		  
+		   <img class="book-logo" src="{% static 'images/logo.png'%}">
+                <ul class="book-main-nav" id="book-check">
+                    <li><a href="#">BOOKS</a></li>
+                    <li><a href="#">BUY</a></li>
+                    <li><a href="#">SELL</a></li>
+                    <li><a href="#">LOGIN</a></li>
+
+                </ul>
+		  
+		  
+		  
+		  
+		  
+		  
+		  </div>
+
+
+
+<br>
+
+        
+<div id="bo-container">
+ <div id="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li {% if not category %}class="selected"{% endif %}>
+        <a href="{% url 'app1:book_list' %}">All</a>
+      </li>
+      {% for c in categories %}
+        <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+          <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="main" class="book-list">
+    <h1 class="her">{% if category %}{{ category.name }}{% else %}Books{% endif %}</h1>
+    {% for book in books %}
+      <div class="item">
+        <a href="{{ book.get_absolute_url }}">
+          <img  src="{% static 'images/3.jpg'%}" >
+     
+
+	   </a>
+        <a href="{{ book.get_absolute_url }}">{{ book.name }}</a><br>
+        ${{ book.price }}
+		
+      </div>
+    {% endfor %}
+  </div>
+
+ </div>
+ {% endblock %}

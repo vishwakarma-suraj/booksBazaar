@@ -1,0 +1,167 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+body { 
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif; 
+	box-sizing:border-box;
+}
+
+
+#sidebar {
+    width:20%;
+    padding:30px 20px 0 0;
+    float:left;
+}
+
+#sidebar ul{
+    margin:0;
+    padding:0;
+}
+
+#sidebar ul li {
+    margin:0;
+    list-style:none;
+    padding:10px 14px;
+}
+
+#sidebar ul li a {
+    display:block;
+}
+
+#sidebar ul li.selected {
+    background:#5993bb;
+    border-radius:4px;
+}
+
+#sidebar ul li.selected a {
+    color:#fff;
+}
+
+#main {
+    float:left;
+    width: 80%;
+    margin-right:-220px; 
+    overflow:hidden;
+}
+
+.book-list .item {
+    width:25%;
+    padding:10px 20px 10px 0;
+    float:left;
+    text-align:center;
+	
+    line-height:1.2;
+}
+
+.book-list .item img {
+width:100%;
+    margin-bottom:8px;
+}
+
+.book-detail {
+    text-align:justify;
+	 margin-left:40px;
+	margin-top:40px;
+}
+
+.book-detail .price {
+    color:#333;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.book-detail img {
+    width:40%;
+    float:left;
+    padding:0 20px 20px 0;
+}
+
+.book-detail h1 {
+    margin-bottom:0;
+}
+
+.book-detail h2 {
+   
+}
+
+
+
+
+
+
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+.book-nav{
+	
+	width:100%;
+	height:100px;
+	
+	background:url(../images/1.jpg);
+	
+}
+
+
+
+.book-logo {
+    height: 60px;
+    width: auto;
+    margin-left: 80px;
+    float: left;
+    margin-top: 20px;
+
+
+}
+
+.book-main-nav {
+    float: right;
+    margin-top: 40px;
+   padding-right:80px;
+
+}
+
+
+.book-main-nav li {
+
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+}
+
+
+
+
+
+.book-main-nav li a {
+
+color:white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#bo-container{
+width:100%;
+height:120vh;
+
+padding-left:20px;
+padding-top:20px;
+overflow:hidden;
+
+
+}
+
+.her{
+
+padding-left:480px;
+}
+
+a{
+	text-decoration:none;
+}

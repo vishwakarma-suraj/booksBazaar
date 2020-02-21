@@ -2,12 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	text-decoration:none;
+
+	
 }
+
 
 header {
     height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/3.jpg);
     background-size: cover;
+		overflow:hidden;
 }
 
 
@@ -17,11 +22,12 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 170px;
     width: auto;
-    margin-left: 20px;
+    margin-left: -120px;
     float: left;
-    margin-top: 40px;
+    margin-top: 0px;
+		overflow:hidden;
 
 
 }
@@ -29,7 +35,9 @@ header {
 .main-nav {
     float: right;
     margin-top: 70px;
-   padding-right:20px;
+	margin-right:-60px;
+	overflow:hidden;
+  
 
 }
 
@@ -39,6 +47,8 @@ header {
     display: inline-block;
     list-style: none;
     margin-left: 40px;
+		overflow:hidden;
+	 
 }
 
 
@@ -84,26 +94,16 @@ header {
         float: left;
     }
 
-    .container{
-         position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-   padding-left:10px;
-    width:50%;
-        border:1px solid red;
-        
-        
-        
-    }
+  
     
         .search-input{
     
-    width:60%;
+    width:20%;
     height:50px;
     padding:10px;
     padding-left:40px;
     float:left;
+	outline:none;
      border-radius: 10px 0px 0px 10px;
 }
     
@@ -119,31 +119,32 @@ header {
 
 
 
+ .container{
 
-
-@media(min-width:768px){
-    .container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-   
-    width:50%;
+    position:relative;
+	top:50px;
+	left:80px;
+   outline:none;
+    width:120%;
         
         padding-left:80px;
         
     }
+
+@media(min-width:768px){
+   
     
     
     
     
     .search-input{
     
-    width:80%;
+    width:30%;
     height:50px;
     padding:10px;
     padding-left:40px;
     float:left;
+	outline:none;
      border-radius: 10px 0px 0px 10px;
 }
 
@@ -156,8 +157,9 @@ header {
   padding:15px;
     color:white;
   border-radius: 0px 10px 10px 0px;
-    background:blue;
+       background:blue;
     float:left;
+	outline:none;
     
 }
 
@@ -296,6 +298,7 @@ margin-left:160px;
     padding-left:40px;
         margin-left:500px;
     float:left;
+	outline:none;
      border-radius: 10px 0px 0px 10px;
 }
 
@@ -310,6 +313,7 @@ margin-left:160px;
   border-radius: 0px 10px 10px 0px;
     background:#02C39A;
     float:left;
+	outline:none;
     
 }
 
@@ -331,9 +335,7 @@ margin-left:160px;
     
 }
 
-.t{font-size:30px}
-.b{font-size:40px;}
-.a{font-size:20px}
+
 .footer{
     
     width:100%;
@@ -349,3 +351,169 @@ padding-top:40px;
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+small{color:white;
+font-size:25px;
+text-decoration:none;}
+
+
+.footer-distributed h3{
+	color:  #ffffff;
+	
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+
+.cpy{
+	font-size:16px;
+}
+
+
+
+
+

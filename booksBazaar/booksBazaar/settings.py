@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'app1',
+	
 ]
 
 MIDDLEWARE = [
@@ -112,3 +113,28 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT= 'booksBazaar/media'
 MEDIA_URL='/media/'
+
+
+
+
+LOGIN_REDIRECT_URL = 'app1:index_page' 
+LOGIN_URL = 'app1:login'
+LOGOUT_URL = 'app1:logout'
+
+
+
+
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'vishwakarmasuraj79@gmail.com'
+
+EMAIL_HOST_PASSWORD = ''

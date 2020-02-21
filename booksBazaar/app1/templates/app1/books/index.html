@@ -10,13 +10,23 @@
         <nav>
             <div class="row">
 
-                <img class="logo" src="{% static 'images/logo.png'%}">
-                <ul class="main-nav" id="check">
+              <a href="{% url 'app1:index_page' %}"> <img class="logo" src="{% static 'images/logo.png'%}"></a>
+                
+				 
+				<div class="container">
+        
+        
+        <input class="search-input" type="text" placeholder="Search here">
+           <a href="#"> <i class="fa fa-search " id="sr"></i></a>
+        </div>
+				<ul class="main-nav" id="check">
+				
                     <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
                     <li><a href="#">BUY</a></li>
                     <li><a href="#">SELL</a></li>
-                    <li><a href="#">LOGIN</a></li>
-
+					
+					<li><a href="{% url 'app1:login' %}">LOGIN</a></li>
+					
                 </ul>
 
                 <a href="#" class="mobile-icon" onclick="slideshow()"><i class="fa fa-bars"></i></a>
@@ -33,12 +43,7 @@
         
         
         
-        <div class="container">
-        
-        
-        <input class="search-input" type="text" placeholder="Search here">
-            <i class="fa fa-search " id="sr"></i>
-        </div>
+       
 
 
     </header>
@@ -188,13 +193,64 @@
 
 
 <!--*******************************************footer**********************************************-->
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3 class="fthj"><a href='/'><small>Books Bazaar</small></a></h3>
+		
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					
+					
+					<a href="#">About</a>
+					·
+					
+					
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Books Bazaar &copy; 2020</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p>Contact Us</p>
+
+				<form action="#" method="post">
+
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+
+				</form>
+
+			</div>
+
+		</footer>
+
+
+
+
 
 <div class="footer">
 
 
 <div class="footer-text">
     
-    <small>Copyright &amp; 2020 all rights reserved </small>
+    <small class="cpy">Copyright &amp; 2020 all rights reserved </small>
     
     
     </div>

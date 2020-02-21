@@ -1,0 +1,53 @@
+{% extends 'app1/base.html' %}
+ {% load static %}
+{% block css%}
+
+ <link rel="stylesheet" href="{% static 'css/book_page.css' %}" />
+
+{% endblock css%}
+{% block content %}
+
+          <div class="book-nav">
+		  
+		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
+                <ul class="book-main-nav" id="book-check">
+                    <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
+                    <li><a href="#">BUY</a></li>
+                    <li><a href="#">SELL</a></li>
+                    <li><a href="#">LOGIN</a></li>
+
+                </ul>
+		  
+		  
+		  
+		  
+		  
+		  
+		  </div>
+
+
+
+
+
+<div class="loginform">
+ <form class="frma" method="post">
+ <div class="ltext">Login</div>
+   {% csrf_token %}
+   {% for field in form %}
+     
+       <label class="head">{{ field.label_tag }}</label>
+      {{ field }}
+	  <br>
+	  <br>
+       {% for error in field.errors %}
+         <p style="color: red">{{ error }}</p>
+       {% endfor %}
+     
+   {% endfor %}
+   <button class="btn" type="submit">Sign in</button>
+   
+   <a class="btna"  href="{% url 'app1:register' %}">Sign Up</a>
+ </form>
+ 
+ </div>
+{% endblock %}

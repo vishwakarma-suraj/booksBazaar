@@ -9,12 +9,12 @@
       
           <div class="book-nav">
 		  
-		   <img class="book-logo" src="{% static 'images/logo.png'%}">
+		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
                 <ul class="book-main-nav" id="book-check">
                     <li><a href="#">BOOKS</a></li>
                     <li><a href="#">BUY</a></li>
                     <li><a href="#">SELL</a></li>
-                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="{% url 'app1:login' %}">LOGIN</a></li>
 
                 </ul>
 		  

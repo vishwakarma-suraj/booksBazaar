@@ -1,0 +1,38 @@
+
+{% extends "app1/base.html" %}
+{% block content %}
+
+   <form method="POST">
+
+     {% csrf_token %}
+     <div class="form-group">
+	 <input type="text" name="srh" placeholder="search"/>
+	 <button type="submit" >Search</button>
+	 </div>
+	 {% for res in sr%}
+	 
+            <article>
+	
+        <header><h2>{{ res.title }} </h2></header>
+		<footer><small>{{res.date_posted}}</small></footer>
+         
+		  <a class="mr-2" href="#">{{ post.author }}</a>
+		 <p>{{res.content}}</p>
+		 <footer>
+		 <span class="label label-default bg-success">code</span>
+		 <span class="label label-default bg-success">code</span>
+		 <span class="label label-default bg-success">code</span>
+		 
+		 
+		 </footer>
+		 <hr>
+        </article>
+						
+						
+			{%endfor%}
+    
+        </form>
+
+    
+
+{% endblock content %}

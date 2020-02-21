@@ -21,7 +21,7 @@ def signup(request):
 			user = authenticate(username=username,email=user.email, password=raw_password)
 			login(request, user)
 			messages.success(request,f'Account created')
-			return redirect('login')
+			return redirect('app1:login')
 	else:
 		form = SignUpForm()
 	return render(request, 'users/register.html', {'form': form})

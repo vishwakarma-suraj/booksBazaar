@@ -1,6 +1,41 @@
 {% extends 'app1/base.html' %}
+ {% load static %}
+{% block css%}
 
+ <link rel="stylesheet" href="{% static 'css/book_page.css' %}" />
+
+{% endblock css%}
 {% block content %}
-<h2>You have been logged out</h2>
- 
+
+          <div class="book-nav">
+		  
+		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
+                <ul class="book-main-nav" id="book-check">
+                    <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
+                   
+                    <li><a href="#">SELL</a></li>
+                    {% if request.user.is_authenticated %}
+
+					<li><a href="{% url 'app1:logout' %}">LOGOUT</a></li>
+					
+					{%else%}
+					<li><a href="{% url 'app1:login' %}">LOGIN</a></li>
+					{% endif %}
+
+                </ul>
+		  
+		  
+		  
+		  
+		  
+		  
+		  </div>
+
+<br>
+<br>
+<br>
+<h2 class="lgot">         You have been logged out</h2>
+
+
+
 {% endblock %}

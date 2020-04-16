@@ -1,0 +1,93 @@
+
+{% load static %}
+ <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
+
+
+{% block content %}
+
+ <div class="book-nav">
+		  
+		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
+                <ul class="book-main-nav" id="book-check">
+                    
+                    
+                    <li><a href="#">SELL</a></li>
+                    {% if request.user.is_authenticated %}
+					
+					<li><a href="{% url 'app1:logout' %}">LOGOUT</a></li>
+					
+					{%else%}
+					<li><a href="{% url 'app1:login' %}">LOGIN</a></li>
+					{% endif %}
+                </ul>
+		  
+		  
+		  
+		  
+		  
+		  
+		  </div>
+		  <br>
+		  <br>
+  <h1 class="cent">Your shopping cart</h1>
+   {% with total_items=cart|length %}
+ {% if total_items > 0 %}
+ Your cart:
+ <a href="{% url 'cart:cart_detail' %}">
+ {{ total_items }} item{{ total_items|pluralize }},
+ Rs.{{ cart.get_total_price }}
+ </a>
+ {% else %}
+ Your cart is empty.
+ {% endif %}
+ {% endwith %}
+  <br>
+  <br>
+  <table class="cart">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Remove</th>
+       
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart %}
+        {% with product=item.book %}
+      <tr>
+            <td>
+              <a href="{{ product.get_absolute_url }}">
+                <img src="{% if product.image %}{{ product.image.url }}
+                {% else %}{% static 'img/b.jpg' %}{% endif %}">
+              </a>
+            </td>
+            <td>{{ product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td><a href="{% url 'cart:cart_remove' product.id %}">Remove</a></td>
+            
+            <td class="num">Rs.{{ item.total_price }}</td>
+			
+			          </tr>
+        {% endwith %}
+      {% endfor %}
+      <tr class="total">
+        <td>Total</td>
+        <td colspan="3"></td>
+        <td class="num">Rs.{{ cart.get_total_price }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-right">
+    <a href="{% url 'app1:book_list' %}" class="button light">Continue shopping</a>
+    <a href="#" class="button">
+      Checkout
+    </a>
+	
+  </p>
+  
+{% endblock %}
+
+

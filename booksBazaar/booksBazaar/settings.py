@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'app1',
+    'cart',
 	
 ]
 
@@ -52,6 +53,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -138,3 +140,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'vishwakarmasuraj79@gmail.com'
 
 EMAIL_HOST_PASSWORD = ''
+
+
+
+CART_SESSION_ID = 'cart'

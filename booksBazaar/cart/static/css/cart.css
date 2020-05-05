@@ -330,3 +330,53 @@ a.button.light {
 	margin-bottom:40px;
 }
 
+
+
+
+.order-form {
+    float:left;
+	
+	
+}
+
+.order-info {
+    float:right;
+    width:300px;
+    
+    padding:10px 20px;
+    color:#333;
+    border-bottom:4px solid #5993bb;
+}
+
+.order-info h3 {
+    color:#5993bb;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+}
+
+.order-info span {
+    float:right;
+}
+
+
+.ltext{
+	text-align:center;
+	font-size:30px;
+	
+	font-weight:bold;
+}
+
+
+.head{
+	font-size:25px;
+	margin-top:10px;
+}

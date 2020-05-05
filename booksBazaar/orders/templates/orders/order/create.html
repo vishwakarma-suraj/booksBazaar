@@ -1,9 +1,7 @@
 {% load static %}
 {% load i18n %}
  <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
-{% block title %}
-    {% trans "Checkout" %}
-{% endblock %}
+
 
 {% block content %}
 
@@ -33,29 +31,71 @@
 
 
 
-    <h1>{% trans "Checkout" %}</h1>
 
     <div class="order-info">
-        <h3>{% trans "Your order" %}</h3>
+	<br>
+        <h3>Your order </h3>
+		<br>
+		<br>
         <ul>
             {% for item in cart %}
-                <li>{{ item.quantity }}x {{ item.product.name }} <span>${{ item.total_price }}</span></li>
+                <li>{{ item.quantity }}x {{ item.product.name }} <span>Rs.{{ item.total_price }}</span></li>
             {% endfor %}
             {% if cart.coupon %}
                 <li>
                     {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
                         "{{ code }}" ({{ discount }}% off)
                     {% endblocktrans %}
-                    <span>- ${{ cart.get_discount|floatformat:"2" }}</span>
+                    <span>- Rs.{{ cart.get_discount|floatformat:"2" }}</span>
                 </li>
             {% endif %}
         </ul>
-        <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
+        <p>{% trans "Total" %}: Rs.{{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
     </div>
 
-    <form action="." method="post" class="order-form">
-        {{ form.as_p }}
-        <p><input type="submit" value="{% trans 'Place order' %}"></p>
-        {% csrf_token %}
-    </form>
+   
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ <form action="." method="post" class="order-form">
+ <br>
+<h1>Checkout</h1>
+ <br>
+ <br>
+   {% csrf_token %}
+   {% for field in form %}
+     
+       <label class="head">{{ field.label_tag }}</label><br>
+      {{ field }}
+	  <br>
+	  <br>
+     
+     
+   {% endfor %}
+  <p><input type="submit" value='Place order'></p>
+   
+  
+ </form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 {% endblock %}

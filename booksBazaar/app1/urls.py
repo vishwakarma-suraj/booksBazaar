@@ -59,6 +59,9 @@ urlpatterns=[
          ),
 
          name='password_reset_complete'),
+    
+    
+      path('search/',views.search,name='search'),
 		 
 	
 	

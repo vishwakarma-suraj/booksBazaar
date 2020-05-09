@@ -1,38 +1,74 @@
-
 {% extends "app1/base.html" %}
+{% load static %}
+
+{% block css%}
+
+ <link rel="stylesheet" href="{% static 'css/book_page.css' %}" />
+
+{% endblock css%}
+
 {% block content %}
 
-   <form method="POST">
+   <div class="book-nav">
+		  
+		  <a href="{% url 'app1:index_page' %}"> <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
+                <ul class="book-main-nav" id="book-check">
+                  
+                    
+                   <li><a href="{% url 'Sell:post_list' %}">SELL</a></li>
+                   {% if request.user.is_authenticated %}
 
-     {% csrf_token %}
-     <div class="form-group">
-	 <input type="text" name="srh" placeholder="search"/>
-	 <button type="submit" >Search</button>
-	 </div>
-	 {% for res in sr%}
-	 
-            <article>
-	
-        <header><h2>{{ res.title }} </h2></header>
-		<footer><small>{{res.date_posted}}</small></footer>
-         
-		  <a class="mr-2" href="#">{{ post.author }}</a>
-		 <p>{{res.content}}</p>
-		 <footer>
-		 <span class="label label-default bg-success">code</span>
-		 <span class="label label-default bg-success">code</span>
-		 <span class="label label-default bg-success">code</span>
-		 
-		 
-		 </footer>
-		 <hr>
-        </article>
-						
-						
-			{%endfor%}
+					<li><a href="{% url 'app1:logout' %}">LOGOUT</a></li>
+					
+					{%else%}
+					<li><a href="{% url 'app1:login' %}">LOGIN</a></li>
+					{% endif %}
+
+                </ul>
+		  
+		  
+		  
+		  
+		  
+		  
+		  </div>
+
+
+
+
+
+
+
+  <div class="book-detail">
+      
+      
+      
     
-        </form>
+{% if sr %}
+{% for k in sr %}
+
+  {% if k.image %}
+            <a href="{{ k.get_absolute_url }}">
+                    <img src='{{k.image.url }}'   />
+</a>
 
     
+
+{% endif %}
+
+{% endfor %}
+{% endif %}  
+      
+      
+      
+    
+
+  </div>
+
+
+
+
+
+
 
 {% endblock content %}

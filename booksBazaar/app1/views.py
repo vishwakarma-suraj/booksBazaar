@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 from .forms import SignUpForm
-from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
 
 
@@ -30,7 +30,17 @@ def signup(request):
 
 
 
+def search(request):
 
+    if request.method=='POST':
+        srch=request.POST['srh']
+        if srch:
+            match=Book.objects.filter(Q(name__icontains=srch))
+            if match:
+                return render(request,'users/search.html',{'sr':match})
+        else:
+            return HttpResponseRedirect('/search/')
+    return render(request,'users/search.html')
 
 
 

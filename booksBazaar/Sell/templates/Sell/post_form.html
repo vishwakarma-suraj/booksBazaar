@@ -32,13 +32,40 @@
 
 
 
+<div class='loginform'>
 
-
-<form method='POST' action=''>
+<form class="frma" method='post' enctype='multipart/form-data'>
 {% csrf_token %}
-{{form.as_p}}
+{% for field in form %}
+     
+       <div>
+       {{ field.label }}
+       {{ field }}
+       {% for error in field.errors %}
+         <p style="color: red">{{ error }}</p>
+       {% endfor %}
+     </div>
+     
+   {% endfor %}
 
-<input type ='submit' value='Add Product'/>
+<button type="submit">Add Product</button>
     
 </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}

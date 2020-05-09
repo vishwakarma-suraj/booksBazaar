@@ -140,13 +140,25 @@ header {
     .search-input{
     
     width:30%;
-    height:50px;
+    height:52px;
     padding:10px;
     padding-left:40px;
     float:left;
 	outline:none;
      border-radius: 10px 0px 0px 10px;
+        border-color:white;
 }
+    
+    .newbutton{
+          
+ 
+    color:white;
+  border-radius: 0px 10px 10px 0px;
+        border-color:blue;
+       background:blue;
+    float:left;
+	outline:none;
+    }
 
     
 }

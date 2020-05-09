@@ -45,9 +45,9 @@
     
 </h2>
 
-  {% if post.image %}
+  {% if post.img %}
             <a href="{{ post.get_absolute_url }}">
-                    <img src='{{ post.image.url }}' width='100'  />
+                    <img src='{{ post.img.url }}' width='100'  />
             </a
 {% endif %}
                 
@@ -55,10 +55,9 @@
 
 <p class="date">
  {{ post.created }}
-</p><br>
+</p>
 
-{{ post.description}}
-      <br>
+    
                 
 {{ post.contact}}
 <br>

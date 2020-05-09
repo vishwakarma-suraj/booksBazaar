@@ -23,7 +23,7 @@
 				
                     <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
                     
-                    <li><a href="#">SELL</a></li>
+                    <li><a href="{% url 'Sell:post_list' %}">SELL</a></li>
 					{% if request.user.is_authenticated %}
 					
 					<li><a href="{% url 'app1:logout' %}">LOGOUT</a></li>

@@ -1,0 +1,88 @@
+{% extends 'app1/base.html' %}
+ {% load static %}
+{% block css%}
+
+ <link rel="stylesheet" href="{% static 'css/book_page.css' %}" />
+
+{% endblock css%}
+{% block content %}
+
+ <div class="book-nav">
+		  
+		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
+                <ul class="book-main-nav" id="book-check">
+                    <li><a href="{% url 'Sell:post_create' %}">Post an Add</a></li>
+                    <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
+                    
+                     <li><a href="{% url 'Sell:post_list' %}">SELL</a></li>
+                    <li><a href="{% url 'app1:login' %}">LOGIN</a></li>
+
+                </ul>
+		  
+		  
+		  
+		  
+		  
+		  
+		  </div>
+
+
+
+
+
+{% for post in posts %}
+<h2>
+<a href="{{ post.get_absolute_url }}">
+  <br>
+<br>   
+    {{ post.title }}
+  
+
+</a>
+    
+    
+    
+    
+</h2>
+
+  {% if post.image %}
+            <a href="{{ post.get_absolute_url }}">
+                    <img src='{{ post.image.url }}' width='100'  />
+            </a
+{% endif %}
+                
+<br>
+
+<p class="date">
+ {{ post.created }}
+</p><br>
+
+{{ post.description}}
+      <br>
+                
+{{ post.contact}}
+<br>
+                
+
+Rs. {{post.price}}
+    <br>
+ {{ post.owner }}
+
+{% endfor %}
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@
 {% endblock css%}
 {% block content %}
 
-          <div class="book-nav">
+ <div class="book-nav">
 		  
 		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
                 <ul class="book-main-nav" id="book-check">
@@ -26,28 +26,25 @@
 		  </div>
 
 
+<br><br>
+<p>
+BOOK TITLE===={{ post.title }}
+<br>
+
+     {{    post.created}} 
+<br>
 
 
+BOOK DETAILS======{{ post.description }}<br>
+CONTACT DETAILS======{{   post.contact}}
 
-<div class="loginform">
- <form class="frma" method="post">
- <div class="ltext">Login</div>
-   {% csrf_token %}
-   {% for field in form %}
-     
-       <label class="head">{{ field.label_tag }}</label>
-      {{ field }}
-	  <br>
-	  <br>
-       {% for error in field.errors %}
-         <p style="color: red">{{ error }}</p>
-       {% endfor %}
-     
-   {% endfor %}
-   <button class="btn" type="submit">Sign in</button>
-   
-   <a class="btna"  href="{% url 'app1:register' %}">Sign Up</a>
- </form>
- 
- </div>
-{% endblock %}
+<br>
+
+BOOK PRICE======== Rs. {{  post.price}}<br>
+
+
+ BOOK OWNER  ===== {{   post.owner }}<br>
+<a href="{% url 'Sell:post_update' post.id %}">Update</a>
+<a href="{% url 'Sell:post_delete' post.id %}">Delete</a>
+</p>
+{% endblock content %}

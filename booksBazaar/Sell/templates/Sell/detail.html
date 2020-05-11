@@ -14,7 +14,7 @@
                     <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
                     
                      <li><a href="{% url 'Sell:post_list' %}">SELL</a></li>
-                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="{% url 'app1:login' %}">LOGIN</a></li>
 
                 </ul>
 		  
@@ -27,27 +27,147 @@
 
 
 <br><br>
- <a href="{{ post.get_absolute_url }}">
-                    <img src='{{ post.img.url }}' width='100'  />
-            </a
-<p>
-BOOK TITLE===={{ post.title }}
-<br>
-
-     {{    post.created}} 
-<br>
-
-
-BOOK DETAILS======{{ post.description }}<br>
-CONTACT DETAILS======{{   post.contact}}
-
-<br>
-
-BOOK PRICE======== Rs. {{  post.price}}<br>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="con">
 
 
- BOOK OWNER  ===== {{   post.owner }}<br>
-<a href="{% url 'Sell:post_update' post.id %}">Update</a>
-<a href="{% url 'Sell:post_delete' post.id %}">Delete</a>
+
+
+
+
+<div class="cont">
+  {% if post.img %}
+            
+			<div class="sellimg">
+			
+                   <a href="{{ post.get_absolute_url }}" > <img   class="imk " src='{{ post.img.url }}' width="400"  /></a>
+					
+					</div>
+					
+					{% endif %}
+					
+					
+					<div class="selldetails">
+					
+					
+					
+					<div class="title">
+					    {{ post.title }}
+						</div>
+	<div class="created">
+	{{ post.created }}
+
+    </div>
+	
+	
+	<div class="description">
+	{{ post.description }}
+
+    </div>
+         <div class="contact">        
+
+ Contact Details :	  
+{{ post.contact}}
+
+       </div>         
+<div class="price">
+Price:
+Rs. {{post.price}}
+    </div>
+	
+	<div class="owner">
+	Owner:
+ {{ post.owner }}
+					
+		</div>	
+		<br>
+
+<div class="mod">
+
+
+<a  class="modi" href="{% url 'Sell:post_update' post.id %}">Update</a>
+
+
+
+<a class="modi" href="{% url 'Sell:post_delete' post.id %}">Delete</a>
+
+</div>	
+
+
+	
+					
+		</div>			
+		
+			
+					
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+ 
+  
+
+
+    
+    
+    
+    
+
+                
+
+
+
+ 
+
+
+
+</div>
+
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 </p>
 {% endblock content %}

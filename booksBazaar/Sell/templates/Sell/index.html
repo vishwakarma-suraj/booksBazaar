@@ -25,49 +25,110 @@
 		  
 		  
 		  </div>
+<br></br>
 
-
-
+<div class="con">
 
 
 {% for post in posts %}
-<h2>
-<a href="{{ post.get_absolute_url }}">
-  <br>
-<br>   
-    {{ post.title }}
+
+
+
+<div class="cont">
+  {% if post.img %}
+            
+			<div class="sellimg">
+			
+                   <a href="{{ post.get_absolute_url }}" > <img   class="imk " src='{{ post.img.url }}' width="400"  /></a>
+					
+					</div>
+					
+					{% endif %}
+					
+					
+					<div class="selldetails">
+					
+					
+					
+					<div class="title">
+					    {{ post.title }}
+						</div>
+	<div class="created">
+	{{ post.created }}
+
+    </div>
+	
+	
+	<div class="description">
+	{{ post.description }}
+
+    </div>
+	
+      <div class="contact">        
+
+ Contact Details :	  
+{{ post.contact}}
+
+       </div>         
+<div class="price">
+Price:
+Rs. {{post.price}}
+    </div>
+	
+	<div class="owner">
+	Owner:
+ {{ post.owner }}
+					
+		</div>			
+					
+		</div>			
+		
+			
+					
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
-</a>
-    
-    
-    
-    
-</h2>
+ 
+ 
+  
 
-  {% if post.img %}
-            <a href="{{ post.get_absolute_url }}">
-                    <img src='{{ post.img.url }}' width='100'  />
-            </a
-{% endif %}
-                
-<br>
-
-<p class="date">
- {{ post.created }}
-</p>
 
     
-                
-{{ post.contact}}
-<br>
+    
+    
+    
+
                 
 
-Rs. {{post.price}}
-    <br>
- {{ post.owner }}
 
+
+ 
+
+
+
+</div>
 {% endfor %}
+
+
+
+
+</div>
+
 
 
 {% endblock content %}

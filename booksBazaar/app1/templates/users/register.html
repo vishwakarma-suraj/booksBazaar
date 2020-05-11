@@ -12,10 +12,10 @@
 		  
 		 <a href="{% url 'app1:index_page' %}">  <img class="book-logo" src="{% static 'images/logo.png'%}"></a>
                 <ul class="book-main-nav" id="book-check">
-                    <li><a href="#">BOOKS</a></li>
+                    <li><a href="{% url 'app1:book_list' %}">BOOKS</a></li>
                     <li><a href="#">BUY</a></li>
-                    <li><a href="#">SELL</a></li>
-                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="{% url 'Sell:post_list' %}">SELL</a></li>
+                    <li><a href="{% url 'app1:login' %}">LOGIN</a></li>
 
                 </ul>
 		  
@@ -43,7 +43,7 @@
      </div>
    {% endfor %}
      <a class="btna"  href="{% url 'app1:login' %}">Sign in</a>
-   <button class="btn" type="submit">Sign up</button>
+   <button class="btn" type="submit">Submit</button>
  </form>
  </div>
 {% endblock %}

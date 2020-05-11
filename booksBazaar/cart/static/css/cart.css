@@ -142,9 +142,18 @@ width:100%;
 
 .book-main-nav li a {
 
-color:white;
+	color:white;
     text-decoration: none;
     font-size: 25px;
+	padding: 5px 12px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+	letter-spacing: 3px;
+}
+
+.book-main-nav li a:hover {
+	background-color: #fff;
+	color: #000;
 }
 
 #bo-container{
@@ -205,35 +214,48 @@ a{
 }
 
 .btn{
-	background:blue;
+	background: white;
 	width:100px;
 	height:50px;
 	margin-left:60px;
 		margin-top:10px;
-		border:1px solid blue;
+		border:1px solid #008CBA;
 		    border-radius: 10px 10px 10px 10px;
-		color:white;
+		color: black;
 		font-weight:bold;
 		outline:none;
 		float:left;
+		transition-duration: 0.4s;
+		cursor: pointer;
 }
+
+.btn:hover {
+	background-color: #008CBA;
+	color: white;
+}
+
 .btna{
-	background:blue;
+	background: white;
 	width:100px;
 	height:50px;
 	margin-left:70px;
 		margin-top:10px;
 		border:1px solid blue;
 		    border-radius: 10px 10px 10px 10px;
-		color:white;
+		color:black;
 		font-weight:bold;
 		outline:none;
 		float:left;
 		padding-top:10px;
 		padding-left:20px;
+		transition-duration: 0.4s;
+		cursor: pointer;
 }
 
-
+.btna:hover{
+	background-color: #008CBA;
+    color: white;
+}
 
 .head{
 	font-size:25px;
@@ -320,6 +342,7 @@ a.button {
 	float:right;
     border:0;
 	margin-bottom:40px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 a.button.light {
@@ -330,7 +353,10 @@ a.button.light {
 	margin-bottom:40px;
 }
 
-
+a.button.light:hover {
+	color: #ededed;
+	background: #5993bb;
+}
 
 
 .order-form {

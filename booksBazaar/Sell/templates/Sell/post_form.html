@@ -35,6 +35,9 @@
 <div class='loginform'>
 
 <form class="frma" method='post' enctype='multipart/form-data'>
+
+<center><h2>Post An Add</h2></center>
+<br>
 {% csrf_token %}
 {% for field in form %}
      
@@ -47,8 +50,9 @@
      </div>
      
    {% endfor %}
+   
 
-<button type="submit">Add Product</button>
+<center><button class="adp" type="submit">Add Product</button></center>
     
 </form>
 

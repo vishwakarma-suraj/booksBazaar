@@ -215,12 +215,58 @@ a{
 	
 	}
 	
+	
+	
+	.fma{
+	
+	width:42%;
+	height:110vh;
+	margin:0 auto;
+	padding:40px;
+	box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+	
+	}
+	
+	
+		
+	
+	.fmda{
+	
+	width:42%;
+	height:105vh;
+	margin:0 auto;
+	padding:40px;
+	box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+	
+	}
+	
+	.chkout{
+		
+		width:100%;
+	height:110vh;
+	margin:0 auto;
+	padding-top:20px;
+	
+		
+		
+	}
+	
 .ltext{
 	text-align:center;
 	font-size:30px;
 	
 	font-weight:bold;
 }
+
+
+
+.lcheck{
+	text-align:center;
+	font-size:30px;
+	background:yellow;
+	font-weight:bold;
+}
+
 
 .btn{
 	background: white;
@@ -242,6 +288,40 @@ a{
   background-color: #008CBA;
   color: white;
 }
+
+
+
+
+
+.btnp{
+	background: white;
+	width:100px;
+	height:50px;
+	margin-left:240px;
+		margin-top:10px;
+		border:2px solid #008CBA;
+		    border-radius: 10px 10px 10px 10px;
+		color:black;
+		font-weight:bold;
+		outline:none;
+		float:left;
+		transition-duration: 0.4s;
+        cursor: pointer;
+}
+
+.btnp:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
 
 .btna{
 	background: white;
@@ -271,7 +351,7 @@ a{
 	margin-top:10px;
 }
 
-#id_username, #id_password,#id_email,#id_password1,#id_password2{
+#id_username, #id_password,#id_email,#id_password1,#id_password2,#id_first_name ,#id_last_name,#id_address,#id_city,#id_postal_code{
 	
 	margin-top:10px;
 	padding-left:10px;
@@ -282,6 +362,29 @@ a{
 	
 	
 }
+
+
+
+
+
+
+#id_first_name ,#id_last_name,#id_address,#id_city,#id_postal_code,#id_title,#id_img,#id_description,#id_contact,#id_price,#id_owner{
+	
+	margin-top:10px;
+	padding-left:10px;
+	width:100%;
+	height:50px;
+	outline:none;
+	border-radius: 10px 10px 10px 10px;
+	
+	
+}
+
+
+
+
+
+
 
 .lgot{
 	text-align:center;
@@ -416,8 +519,6 @@ font-size:20px;
 	padding:5px;
 	   
 }
-
-
 
 
 

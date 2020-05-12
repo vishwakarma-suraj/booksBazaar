@@ -32,9 +32,9 @@
 
 
 
-<div class='loginform'>
+<div class="chkout">
 
-<form class="frma" method='post' enctype='multipart/form-data'>
+<form class="fmda" method='post' enctype='multipart/form-data'>
 
 <center><h2>Post An Add</h2></center>
 <br>
@@ -42,8 +42,8 @@
 {% for field in form %}
      
        <div>
-       {{ field.label }}
-       {{ field }}
+      <label class="head"> {{ field.label }}</label><br>
+       {{ field }}<br><br>
        {% for error in field.errors %}
          <p style="color: red">{{ error }}</p>
        {% endfor %}
@@ -56,8 +56,8 @@
     
 </form>
 
-</div>
 
+</div>
 
 
 
